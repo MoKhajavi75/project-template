@@ -1,0 +1,38 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "start": "yarn clean && yarn build && yarn execute",
+    "clean": "rm -rf dist",
+    "build": "tsc --project tsconfig.json",
+    "execute": "node -r dotenv/config dist/index.js",
+    "dev": "nodemon -r dotenv/config --exec ts-node src/index.ts",
+    "lint": "eslint . --ext .js,.ts,.md,.json",
+    "prettier": "prettier --check 'src/*.{ts,js,md,json}'",
+    "prettier-fix": "prettier --write 'src/*.{ts,js,md,json}'"
+  },
+  "author": "MohamadKh75",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11",
+    "@commitlint/config-conventional": "^11",
+    "@types/jest": "^26",
+    "@types/node": "^14",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "eslint": "^7",
+    "husky": "^4",
+    "jest": "^26",
+    "nodemon": "^2",
+    "prettier": "^2",
+    "ts-jest": "^26",
+    "ts-node": "^9",
+    "typescript": "^4"
+  }
+}
