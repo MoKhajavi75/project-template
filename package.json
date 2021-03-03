@@ -12,7 +12,8 @@
     "dev": "nodemon -r dotenv/config --exec ts-node src/index.ts",
     "lint": "eslint . --ext .js,.ts,.md,.json",
     "prettier": "prettier --check 'src/*.{ts,js,md,json}'",
-    "prettier-fix": "prettier --write 'src/*.{ts,js,md,json}'"
+    "prettier-fix": "prettier --write 'src/*.{ts,js,md,json}'",
+    "coverage": "typescript-coverage-report -o coverage"
   },
   "author": "MohamadKh75",
   "license": "MIT",
@@ -33,6 +34,7 @@
     "prettier": "^2",
     "ts-jest": "^26",
     "ts-node": "^9",
-    "typescript": "^4"
+    "typescript": "^4",
+    "typescript-coverage-report": "^0.5.0"
   }
 }
