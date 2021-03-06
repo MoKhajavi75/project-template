@@ -1,11 +1,11 @@
 {
   "verbose": true,
-  "debug": true,
-  "exec": "node -r ts-node/register ./src/index.ts",
+  "exec": "node -r dotenv/config -r ts-node/register -r tsconfig-paths/register ./src/index.ts",
   "events": {
     "start": "clear"
   },
   "watch": ["./src/**/*.ts"],
   "ext": "ts",
-  "inspect": true
+  "inspect": true,
+  "ignore": [".git", "node_modules"]
 }

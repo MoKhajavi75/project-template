@@ -2,39 +2,42 @@
   "name": "project-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
     "start": "yarn clean && yarn build && yarn execute",
-    "clean": "rm -rf dist",
-    "build": "tsc --project tsconfig.json",
-    "execute": "node -r dotenv/config dist/index.js",
-    "dev": "nodemon -r dotenv/config --exec ts-node src/index.ts",
+    "test": "yarn clean && yarn build && jest --no-cache",
+    "clean": "rm -rf dist coverage",
+    "build": "tsc -p tsconfig.json",
+    "execute": "node -r dotenv/config -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
+    "dev": "nodemon",
     "lint": "eslint . --ext .js,.ts,.md,.json",
-    "prettier": "prettier --check 'src/*.{ts,js,md,json}'",
-    "prettier-fix": "prettier --write 'src/*.{ts,js,md,json}'",
+    "prettier": "prettier -c 'src/**/*.{ts,js,md,json}' --loglevel error",
+    "prettier-fix": "prettier -w 'src/**/*.{ts,js,md,json}' --loglevel error",
     "coverage": "typescript-coverage-report -o coverage"
   },
   "author": "MohamadKh75",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8"
+    "dotenv": "^8",
+    "js-yaml": "^4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
+    "@commitlint/cli": "^12",
+    "@commitlint/config-conventional": "^12",
+    "@trivago/prettier-plugin-sort-imports": "^2",
     "@types/jest": "^26",
+    "@types/js-yaml": "^4",
     "@types/node": "^14",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
     "eslint": "^7",
     "husky": "^4",
     "jest": "^26",
     "nodemon": "^2",
     "prettier": "^2",
-    "ts-jest": "^26",
     "ts-node": "^9",
+    "tsconfig-paths": "^3",
     "typescript": "^4",
-    "typescript-coverage-report": "^0.5.0"
+    "typescript-coverage-report": "^0"
   }
 }

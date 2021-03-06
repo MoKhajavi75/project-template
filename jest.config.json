@@ -1,7 +1,10 @@
 {
-  "roots": ["<rootDir>/src"],
-  "testMatch": ["**/__tests__/**/*.+(ts)", "**/?(*.)+(spec|test).+(ts)"],
-  "transform": {
-    "^.+\\.(ts)$": "ts-jest"
-  }
+  "testEnvironment": "node",
+  "rootDir": ".",
+  "roots": ["<rootDir>/dist"],
+  "moduleNameMapper": {
+    "^@app/(.*)$": "<rootDir>/dist/$1"
+  },
+  "testMatch": ["**/__tests__/**/?(*.)+(spec|test).+(js)"],
+  "verbose": true
 }

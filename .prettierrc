@@ -3,6 +3,13 @@
   "bracketSpacing": true,
   "endOfLine": "auto",
   "htmlWhitespaceSensitivity": "css",
+  "importOrder": [
+    "^@[^a][^p][^p][^/]*/(.*)$",
+    "^[^.@][^/]*/(.*)$",
+    "^@app/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
   "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": true,
