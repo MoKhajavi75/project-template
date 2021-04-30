@@ -5,6 +5,7 @@
     "alwaysStrict": true,
     "baseUrl": ".",
     "declaration": false,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "lib": ["ESNext"],

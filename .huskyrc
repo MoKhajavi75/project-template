@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "commit-msg": "commitlint --edit $1",
-    "pre-commit": "yarn prettier && yarn lint"
-  }
-}

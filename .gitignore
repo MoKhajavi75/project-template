@@ -81,6 +81,7 @@ typings/
 # yaml environment variables file
 config.yaml
 config.yml
+!config.example.yml
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -114,10 +115,14 @@ dist
 # TernJS port file
 .tern-port
 
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
+# IDEs
+.vscode/*
+.idea/*
 
 # Telegram
 db
+
+# Libraries
+*.so
 
 # End of https://www.toptal.com/developers/gitignore/api/node
