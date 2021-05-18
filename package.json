@@ -14,7 +14,7 @@
     "prettier": "prettier -c 'src/**/*.{ts,js,md,json}'",
     "prettier-fix": "prettier -w 'src/**/*.{ts,js,md,json}'",
     "coverage": "typescript-coverage-report -o coverage",
-    "mirror-config": "sh scripts/mirrorConfig.sh",
+    "mirror-config": "sh scripts/mirror_config.sh",
     "prepare": "husky install"
   },
   "author": "MohamadKh75",
