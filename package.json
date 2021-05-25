@@ -17,28 +17,32 @@
     "mirror-config": "sh scripts/mirror_config.sh",
     "prepare": "husky install"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@git.debuildex.ir:MohamadKh75/project-template.git"
+  },
   "author": "MohamadKh75",
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@trivago/prettier-plugin-sort-imports": "^2.0.2",
-    "@types/jest": "^26.0.23",
-    "@types/js-yaml": "^4.0.1",
-    "@types/node": "^15.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
-    "eslint": "^7.26.0",
-    "husky": "^6.0.0",
-    "jest": "^26",
-    "nodemon": "^2",
-    "prettier": "^2.3.0",
-    "ts-node": "^9",
-    "tsconfig-paths": "^3",
-    "typescript": "^4.2.4",
+    "@types/jest": "^26.0.24",
+    "@types/js-yaml": "^4.0.2",
+    "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5",
     "typescript-coverage-report": "^0.6.0"
   }
 }
