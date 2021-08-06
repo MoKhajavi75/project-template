@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "yarn clean && yarn build && yarn execute",
-    "test": "yarn clean && yarn build && jest --no-cache",
+    "start": "pnpm clean && pnpm build && pnpm execute",
+    "test": "pnpm clean && pnpm build && jest --no-cache",
     "clean": "rm -rf dist coverage",
     "build": "tsc -p tsconfig.json",
     "execute": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js ./config.yml",
@@ -16,6 +16,10 @@
     "coverage": "typescript-coverage-report -o coverage",
     "mirror-config": "sh scripts/mirror_config.sh",
     "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=6"
   },
   "repository": {
     "type": "git",
