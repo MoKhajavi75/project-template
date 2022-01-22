@@ -29,5 +29,11 @@
     "target": "ESNext"
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build"],
+
+  "tsc-alias": {
+    "replacers": {
+      "BaseUrl": { "enabled": false }
+    }
+  }
 }
