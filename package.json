@@ -2,19 +2,19 @@
   "name": "project-template",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "pnpm clean && pnpm build && pnpm execute",
     "test": "pnpm clean && pnpm build && jest --no-cache",
-    "clean": "rm -rf dist coverage",
-    "build": "tsc -p tsconfig.json",
-    "execute": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js ./config.yml",
-    "dev": "nodemon",
+    "clean": "rm -rf build coverage cache",
+    "build": "tsc && tsc-alias",
+    "execute": "node build/index.js",
+    "dev": "node-dev -r tsconfig-paths/register src/index.ts",
     "lint": "eslint .",
-    "prettier": "prettier -c 'src/**/*.{ts,js,md,json}'",
-    "prettier-fix": "prettier -w 'src/**/*.{ts,js,md,json}'",
+    "prettier": "prettier -c .",
+    "prettier-fix": "prettier -w .",
     "coverage": "typescript-coverage-report -o coverage",
-    "mirror-config": "sh scripts/mirror_config.sh",
+    "mirror-config": "bash scripts/mirror_config.sh",
     "prepare": "husky install"
   },
   "engines": {
@@ -23,30 +23,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.debuildex.ir:MohamadKh75/project-template.git"
+    "url": "git@github.com:MohamadKh75/project-template.git"
   },
   "author": "MohamadKh75",
   "license": "MIT",
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "winston": "^3.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
-    "@types/jest": "^26.0.24",
-    "@types/js-yaml": "^4.0.2",
-    "@types/node": "^16.4.13",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "eslint": "^7.32.0",
-    "husky": "^7.0.1",
-    "jest": "^27.0.6",
-    "nodemon": "^2.0.12",
-    "prettier": "^2.3.2",
-    "ts-node": "^10.1.0",
-    "tsconfig-paths": "^3.10.1",
-    "typescript": "^4.3.5",
-    "typescript-coverage-report": "^0.6.0"
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/jest": "^27.4.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "node-dev": "^7.1.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "tsc-alias": "^1.5.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5",
+    "typescript-coverage-report": "^0.6.4"
   }
 }

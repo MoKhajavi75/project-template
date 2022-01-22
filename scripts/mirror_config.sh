@@ -1,12 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
-[ ! -f config.yml ] && exit
+source "$(dirname "$0")/__styles__.sh"
 
-cat config.yml \
-  | awk "{sub(/token: .*/, \"token: 0\"); print}" \
-  > config.example.yml
+# Check to see if the config.yml file exists
+[ ! -f config.yml ] && exit 0
 
-if [ -n "`git diff config.example.yml 2>&1`" ]; then
-  echo "config.example.yml has been modified!\n"
-  exit 1;
+# Replace value with empty string
+sed 's/: .*/: x/gm' <config.yml >config.example.yml
+
+# Check for changes
+if [[ $(git diff --exit-code config.example.yml) ]]; then
+  echo -e "${ERROR} ${B}config.example.yml${N} has been modified.\n"
+  exit 1
 fi

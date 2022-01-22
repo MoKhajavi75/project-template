@@ -1,8 +1,3 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/node
-# Edit at https://www.toptal.com/developers/gitignore?templates=node
-
-### Node ###
 # Logs
 logs
 *.log
@@ -79,8 +74,8 @@ typings/
 .env*.local
 
 # yaml environment variables file
-config.yaml
-config.yml
+config*.yaml
+config*.yml
 !config.example.yml
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -92,7 +87,6 @@ config.yml
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -119,10 +113,11 @@ dist
 .vscode/*
 .idea/*
 
-# Telegram
-db
+# Build
+build/
+dist/
 
-# Libraries
-*.so
+# Cache
+/cache
 
 # End of https://www.toptal.com/developers/gitignore/api/node
