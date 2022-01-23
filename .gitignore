@@ -114,8 +114,8 @@ config*.yml
 .idea/*
 
 # Build
-build/
 dist/
+build/
 
 # Cache
 /cache

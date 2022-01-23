@@ -1,10 +1,7 @@
 {
   "testEnvironment": "node",
   "rootDir": ".",
-  "roots": ["<rootDir>/dist"],
-  "moduleNameMapper": {
-    "^@app/(.*)$": "<rootDir>/dist/$1"
-  },
+  "roots": ["<rootDir>/build"],
   "testMatch": ["**/__tests__/**/?(*.)+(spec|test).+(js)"],
   "verbose": true
 }
