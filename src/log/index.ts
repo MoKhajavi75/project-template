@@ -7,6 +7,7 @@ const log = winston.createLogger({
       level: 'info',
       format: winston.format.combine(
         winston.format.colorize(),
+        winston.format.align(),
         winston.format.simple()
       ),
       handleExceptions: true,
@@ -17,7 +18,12 @@ const log = winston.createLogger({
 
 export const logger: Logger = {
   profile: id => log.profile(id),
-  info: message => log.info(message),
+
+  info: message => {
+    if (typeof message === 'object') log.info(JSON.stringify(message, null, 2));
+    else log.info(message);
+  },
+
   error: (message): never => {
     log.error(message);
     throw new Error(message);
