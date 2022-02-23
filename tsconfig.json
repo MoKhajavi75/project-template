@@ -33,7 +33,7 @@
 
   "tsc-alias": {
     "replacers": {
-      "BaseUrl": { "enabled": false }
+      "base-url": { "enabled": false }
     }
   }
 }
