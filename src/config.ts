@@ -8,6 +8,4 @@ export interface Config {
 
 if (!existsSync('config.yml')) logger.error('Config: "config.yml" not exists!');
 
-export const config = load(
-  readFileSync('config.yml' || process.argv[process.argv.length - 1], 'utf8')
-) as Config;
+export const config = load(readFileSync('config.yml', 'utf8')) as Config;
