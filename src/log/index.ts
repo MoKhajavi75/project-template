@@ -1,5 +1,5 @@
 import winston, { transports } from 'winston';
-import { Logger } from './types';
+import type { Logger } from './types';
 
 const log = winston.createLogger({
   transports: [
