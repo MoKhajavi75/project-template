@@ -1,7 +1,7 @@
 {
   "name": "project-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "My project template in TS 💙",
   "main": "build/index.js",
   "scripts": {
     "start": "pnpm clean && pnpm build && pnpm execute",
