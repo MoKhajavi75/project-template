@@ -12,7 +12,7 @@
     "dev": "node-dev -r tsconfig-paths/register src/index.ts",
     "lint": "eslint . --config .eslintrc.json --cache",
     "prettier": "prettier -c . --config .prettierrc.json --cache",
-    "format": "prettier -w . --config .prettierrc.json",
+    "format": "prettier -w . --config .prettierrc.json --cache",
     "coverage": "typescript-coverage-report -o coverage",
     "mirror-config": "bash scripts/mirror_config.sh",
     "prepare": "husky install"
