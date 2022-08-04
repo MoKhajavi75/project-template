@@ -10,7 +10,7 @@
     "build": "tsc && tsc-alias",
     "execute": "node build/index.js",
     "dev": "node-dev -r tsconfig-paths/register src/index.ts",
-    "lint": "eslint . --cache",
+    "lint": "eslint . --config .eslintrc.json --cache",
     "prettier": "prettier -c . --cache",
     "format": "prettier -w .",
     "coverage": "typescript-coverage-report -o coverage",
