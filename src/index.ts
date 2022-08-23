@@ -1,6 +1,6 @@
 import { logger } from '@app/log';
 
-const main = () => {
+const main = (): void => {
   logger.info('Hello World!');
 };
 
