@@ -5,3 +5,4 @@ build
 coverage
 cache
 pnpm-lock.yaml
+scripts
